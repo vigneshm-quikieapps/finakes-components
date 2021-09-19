@@ -7,44 +7,51 @@ import SwipableCard from './SwipableCard';
 
 const Carousel = () => {
   return (
-    <Swiper style={styles.wrapper} showsButtons={false}>
-      <View style={styles.slide1}>
-        <SwipableCard
-          heading={'Price & Delivery Trigger'}
-          description={'Finakes Swipable Component'}
-        />
-      </View>
-      <View style={styles.slide1}>
-        <SwipableCard
-          heading={'Price & Delivery Trigger'}
-          description={'Finakes Swipable Component'}
-        />
-      </View>
-      <View style={styles.slide1}>
-        <SwipableCard
-          heading={'Price & Delivery Trigger'}
-          description={'Finakes Swipable Component'}
-        />
-      </View>
-      <View style={styles.slide1}>
-        <SwipableCard
-          heading={'Price & Delivery Trigger'}
-          description={'Finakes Swipable Component'}
-        />
-      </View>
-    </Swiper>
+    <View style={styles.container}>
+      <Swiper style={styles.wrapper} showsButtons={false}>
+        <View style={styles.slide1}>
+          <SwipableCard
+            heading={'Price & Delivery Trigger'}
+            description={'Finakes Swipable Component'}
+          />
+        </View>
+        <View style={styles.slide1}>
+          <SwipableCard
+            heading={'Price & Delivery Trigger'}
+            description={'Finakes Swipable Component'}
+          />
+        </View>
+        <View style={styles.slide1}>
+          <SwipableCard
+            heading={'Price & Delivery Trigger'}
+            description={'Finakes Swipable Component'}
+          />
+        </View>
+        <View style={styles.slide1}>
+          <SwipableCard
+            heading={'Price & Delivery Trigger'}
+            description={'Finakes Swipable Component'}
+          />
+        </View>
+      </Swiper>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
+  container: {
+    height: 400,
+    alignItems: 'center',
+    justifyContent: 'space-evenly',
+  },
   wrapper: {
-    // flex: 0.4,s
+    // height: '30%',
+    // backgroundColor: '#ff0000',
   },
   slide1: {
-    // height: 400,
     justifyContent: 'center',
     alignItems: 'center',
-    marginVertical: 15,
+    // marginVertical: 15,
     backgroundColor: colorConstants.darkTheme,
   },
   slide2: {

@@ -4,20 +4,29 @@ import Carousel from '../../components/Carousel';
 import SwipableCard from '../../components/SwipableCard';
 import {commonStyles} from '../../core/constants';
 
-const HomeScreen = () => {
+const MultipleCarousels = () => {
   return (
-    <ScrollView
-      contentContainerStyle={[
-        commonStyles.centeredContent,
-        commonStyles.appBG,
-        {justifyContent: 'flex-start'},
-      ]}>
+    <>
       <View>
         <Carousel />
       </View>
       <View>
-        <Text>Yest</Text>
+        <Carousel />
       </View>
+      <View>
+        <Carousel />
+      </View>
+      <View>
+        <Carousel />
+      </View>
+    </>
+  );
+};
+
+const HomeScreen = () => {
+  return (
+    <ScrollView>
+      <MultipleCarousels />
     </ScrollView>
   );
 };

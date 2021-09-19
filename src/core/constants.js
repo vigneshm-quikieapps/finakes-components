@@ -18,6 +18,7 @@ export const colorConstants = {
 
 export const commonStyles = StyleSheet.create({
   centeredContent: {
+    // flex: 1,
     height: '100%',
     justifyContent: 'center',
     alignItems: 'center',
