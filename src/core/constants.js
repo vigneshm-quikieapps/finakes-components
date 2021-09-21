@@ -31,3 +31,11 @@ export const commonStyles = StyleSheet.create({
     backgroundColor: colorConstants.darkTheme,
   },
 });
+export const Images ={
+  revenue:require('../assets/d.jpg'),
+  like:require('../assets/like.png'),
+  dislike:require('../assets/dislike.png'),
+  share:require('../assets/share.png'),
+  comments:require('../assets/comments.png'),
+
+}
