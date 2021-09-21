@@ -15,6 +15,7 @@ import Header from '../components/Header';
 import {colorConstants} from '../core/constants';
 import SelectBox from 'react-native-multi-selectbox';
 import {xorBy} from 'lodash';
+import {useNavigation} from '@react-navigation/core';
 
 const K_OPTIONS = [
   {
@@ -93,6 +94,7 @@ const FilterPage = () => {
   const [selectedCompanies, setSelectedCompanies] = useState([]);
   const [enableScrollViewScroll, setEnableScrollViewScroll] = useState(true);
   const [_myScroll, setMyScroll] = useState();
+  const navigation = useNavigation();
 
   const onCompaniesChange = item => {
     setSelectedCompanies(xorBy(selectedCompanies, [item], 'id'));
@@ -433,7 +435,12 @@ const FilterPage = () => {
             </View>
           </View>
           <View style={styles.footer}>
-            <Button title="Get Stocks" />
+            <Button
+              title="Get Stocks"
+              onPress={() => {
+                navigation.goBack();
+              }}
+            />
           </View>
         </View>
       </ScrollView>
