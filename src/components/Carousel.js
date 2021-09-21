@@ -3,6 +3,7 @@ import {StyleSheet, Text, View} from 'react-native';
 
 import Swiper from 'react-native-swiper';
 import {colorConstants, sizeConstants} from '../core/constants';
+import Chart from './Chart';
 import SwipableCard from './SwipableCard';
 
 const Carousel = () => {
@@ -10,10 +11,7 @@ const Carousel = () => {
     <View style={styles.container}>
       <Swiper style={styles.wrapper} showsButtons={false}>
         <View style={styles.slide1}>
-          <SwipableCard
-            heading={'Price & Delivery Trigger'}
-            description={'Finakes Swipable Component'}
-          />
+          <Chart />
         </View>
         <View style={styles.slide1}>
           <SwipableCard

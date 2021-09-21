@@ -14,6 +14,10 @@ export const sizeConstants = {
 export const colorConstants = {
   darkTheme: '#061325',
   lightTheme: '#9da9bb',
+  white: '#fff',
+  lightGrey: '#D3D3D3',
+  whitishGrey: '#939393',
+  lightBlack: '#515151',
 };
 
 export const commonStyles = StyleSheet.create({
