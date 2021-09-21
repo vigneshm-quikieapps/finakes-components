@@ -5,7 +5,10 @@ import Swiper from 'react-native-swiper';
 const SwipeWrapper = Component => {
   const [childs, setChilds] = useState([]);
   useEffect(() => {
-    setChilds(Component.children.filter(child => child != ' '));
+    setChilds(
+      Component.children.length &&
+        Component.children.filter(child => child != ' '),
+    );
     return () => {
       setChilds([]);
     };

@@ -2,9 +2,17 @@ import {useNavigation} from '@react-navigation/core';
 import React from 'react';
 import {Button, ScrollView, StyleSheet, Text, View} from 'react-native';
 import Carousel from '../../components/Carousel';
-import Chart from '../../components/Chart';
+import {
+  Bar,
+  Contribution,
+  Line,
+  Pie,
+  Progress,
+  StackedBar,
+} from '../../components/Chart';
 import SwipableCard from '../../components/SwipableCard';
 import SwipeWrapper from '../../components/SwipeWrapper';
+import Header from './../../components/Header';
 import {commonStyles} from '../../core/constants';
 
 const MultipleCarousels = () => {
@@ -28,26 +36,33 @@ const HomeScreen = () => {
   const navigation = useNavigation();
   return (
     <ScrollView>
+      <Header title={'Finakes'} />
       <SwipeWrapper>
         <View style={styles.swipeContent}>
-          <Chart />
+          <Bar />
         </View>
         <View style={styles.swipeContent}>
-          <Chart />
+          <Line />
         </View>
         <View style={styles.swipeContent}>
-          <Chart />
+          <Pie />
         </View>
         <View style={styles.swipeContent}>
-          <Chart />
+          <Progress />
+        </View>
+        <View style={styles.swipeContent}>
+          <StackedBar />
         </View>
       </SwipeWrapper>
-      <Button
-        title="Filter"
-        onPress={() => {
-          navigation.navigate('FilterPage');
-        }}
-      />
+      <View>
+        <Button
+          style={styles.btn}
+          title="Filter"
+          onPress={() => {
+            navigation.navigate('FilterPage');
+          }}
+        />
+      </View>
     </ScrollView>
   );
 };
@@ -55,6 +70,9 @@ const HomeScreen = () => {
 const styles = StyleSheet.create({
   swipeContent: {
     height: 400,
+  },
+  btn: {
+    width: 400,
   },
 });
 
