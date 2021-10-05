@@ -42,7 +42,7 @@ const HomeScreen = () => {
   return (
     <ScrollView>
       <Header title={'Finakes'} />
-      <SwipeWrapper>
+      {/* <SwipeWrapper>
         <View style={styles.swipeContent}>
           <Bar />
         </View>
@@ -58,20 +58,20 @@ const HomeScreen = () => {
         <View style={styles.swipeContent}>
           <StackedBar />
         </View>
-      </SwipeWrapper>
+      </SwipeWrapper> */}
 
       <View>
-        <InfoCard />
+        {/* <InfoCard /> */}
         <Table />
-        <MainInfo3 />
+        {/* <MainInfo3 /> */}
       </View>
-      <View>
+      {/* <View>
         <View style={{marginHorizontal: -40}}>
           <CarouselFull />
         </View>
         <MainInfo />
-      </View>
-      <View style={styles.navigationContainer}>
+      </View> */}
+      {/* <View style={styles.navigationContainer}>
         <Button
           style={styles.btn}
           title="Filter"
@@ -93,7 +93,7 @@ const HomeScreen = () => {
             navigation.navigate('Registration');
           }}
         />
-      </View>
+      </View> */}
     </ScrollView>
   );
 };
