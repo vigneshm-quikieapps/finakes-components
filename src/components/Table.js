@@ -12,35 +12,27 @@ export default function Table() {
                </View>
                </View>
                )
-               }
+        }
 
     const ListHeaderComponent=()=>{
         return(
-            
-               
-            
             <View style={{flexDirection:"row",paddingVertical:20,borderBottomColor:"#ffffff",borderBottomWidth:1}}>
-              
                <View style={{width:100,alignItems:"center"}}>
-                   <Text numberOfLines={1} style={{color:"#ffffff"}}>LastPrice</Text>
+                   <Text numberOfLines={1} style={{color:"#ffffff"}}>score</Text>
                </View>
                <View style={{width:100,alignItems:"center"}}>
-                   <Text numberOfLines={1} style={{color:"#ffffff"}}>7D Return</Text>
+                   <Text numberOfLines={1} style={{color:"#ffffff"}}>date</Text>
                </View>
                <View style={{width:100,alignItems:"center"}}>
-                   <Text numberOfLines={1} style={{color:"#ffffff"}}>1Y Return</Text>
+                   <Text numberOfLines={1} style={{color:"#ffffff"}}>brokerage</Text>
                </View>
                <View style={{width:100,alignItems:"center"}}>
-                   <Text numberOfLines={1} style={{color:"#ffffff"}}>Market Cap</Text>
+                   <Text numberOfLines={1} style={{color:"#ffffff"}}>increase%</Text>
                </View>
                <View style={{width:100,alignItems:"center"}}>
-                   <Text numberOfLines={1} style={{color:"#ffffff"}}>Analysts Target</Text>
-               </View>
-               <View style={{width:100,alignItems:"center"}}>
-                   <Text numberOfLines={1} style={{color:"#ffffff"}}>Valuation</Text>
+                   <Text numberOfLines={1} style={{color:"#ffffff"}}>link</Text>
                </View>
             </View>
-            
         )
     }
 
