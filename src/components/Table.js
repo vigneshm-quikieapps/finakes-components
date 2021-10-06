@@ -250,6 +250,11 @@ const Table = () => {
         </View> */}
         <View style={styles.headText}>
           <Text numberOfLines={1} style={styles.textStyle}>
+            Score
+          </Text>
+        </View>
+        <View style={styles.headText}>
+          <Text numberOfLines={1} style={styles.textStyle}>
             date
           </Text>
         </View>
@@ -336,23 +341,6 @@ const Table = () => {
             let itemName = item.name.split('>')[1].split('<')[0];
             return (
               <View style={styles.container}>
-                <View
-                  style={{
-                    transform: [
-                      {
-                        rotate: '-90deg',
-                      },
-                    ],
-                  }}>
-                  <VictoryBar
-                    data={item.score}
-                    style={{data: {fill: '#c43a31'}}}
-                    height={30}
-                    width={70}
-                    barWidth={5}
-                  />
-                </View>
-
                 <View style={styles.containerInner}>
                   <Text
                     numberOfLines={1}
@@ -386,6 +374,22 @@ const Table = () => {
                     {item.Dreturn}%
                   </Text>
                 </View> */}
+                  <View
+                    style={{
+                      transform: [
+                        {
+                          rotate: '-90deg',
+                        },
+                      ],
+                    }}>
+                    <VictoryBar
+                      data={item.score}
+                      style={{data: {fill: '#c43a31'}}}
+                      height={30}
+                      width={70}
+                      barWidth={5}
+                    />
+                  </View>
                   <View style={styles.headText}>
                     <Text numberOfLines={1} style={styles.textStyle}>
                       {item.date}
