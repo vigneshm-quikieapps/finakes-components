@@ -8,6 +8,10 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import HorizontalBarGraph from '@chartiful/react-native-horizontal-bar-graph';
+import {BarChart, Grid} from 'react-native-svg-charts';
+import {sizeConstants} from '../core/constants';
+import {VictoryLine, VictoryBar} from 'victory-native';
+
 const tableData = {
   data: [
     {
@@ -217,7 +221,7 @@ const tableData = {
   },
   paginate: true,
 };
-
+const fill = 'rgb(134, 65, 244)';
 const Table = () => {
   const ListHeaderComponent1 = () => {
     return (
@@ -323,40 +327,6 @@ const Table = () => {
 
   return (
     <>
-      <HorizontalBarGraph
-        data={[125, 100, 50, 75, 100, 125]}
-        labels={[
-          'Q1, 2019',
-          'Q2, 2019',
-          'Q3, 2019',
-          'Q4, 2019',
-          'Q1, 2020',
-          'Q2, 2020',
-        ]}
-        barWidthPercentage={50}
-        width={375}
-        height={350}
-        barRadius={15}
-        baseConfig={{
-          hasYAxisBackgroundLines: false,
-          xAxisLabelStyle: {
-            rotation: 0,
-            fontSize: 12,
-            width: 70,
-            yOffset: 4,
-            xOffset: -15,
-          },
-          yAxisLabelStyle: {
-            rotation: 30,
-            fontSize: 13,
-            prefix: '$',
-            position: 'bottom',
-            xOffset: 15,
-            decimals: 2,
-            height: 100,
-          },
-        }}
-      />
       <View horizontal={true} style={styles.row}>
         <FlatList
           ListHeaderComponent={ListHeaderComponent1}
@@ -366,6 +336,23 @@ const Table = () => {
             let itemName = item.name.split('>')[1].split('<')[0];
             return (
               <View style={styles.container}>
+                <View
+                  style={{
+                    transform: [
+                      {
+                        rotate: '-90deg',
+                      },
+                    ],
+                  }}>
+                  <VictoryBar
+                    data={item.score}
+                    style={{data: {fill: '#c43a31'}}}
+                    height={30}
+                    width={70}
+                    barWidth={5}
+                  />
+                </View>
+
                 <View style={styles.containerInner}>
                   <Text
                     numberOfLines={1}
@@ -439,7 +426,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
   },
   headText: {width: 100, alignItems: 'center', justifyContent: 'center'},
-  textStyle: {color: '#ffffff'},
+  textStyle: {color: '#ffffff', height: 40},
   containerInner: {width: 150, alignItems: 'center'},
   headerContainer: {paddingVertical: 6, backgroundColor: '#16172b'},
   row: {flexDirection: 'row'},
