@@ -19,6 +19,7 @@ import {commonStyles} from '../../core/constants';
 import InfoCard from '../../components/InfoCard';
 import MainInfo3 from '../../components/mainInfo3';
 import Table from '../../components/Table';
+import DataTable from '../../components/DataTable';
 
 const MultipleCarousels = () => {
   return (
@@ -62,7 +63,8 @@ const HomeScreen = () => {
 
       <View>
         {/* <InfoCard /> */}
-        <Table />
+        {/* <Table /> */}
+        <DataTable />
         {/* <MainInfo3 /> */}
       </View>
       {/* <View>
