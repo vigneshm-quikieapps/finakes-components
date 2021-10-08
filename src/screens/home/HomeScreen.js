@@ -18,8 +18,7 @@ import Header from './../../components/Header';
 import {commonStyles} from '../../core/constants';
 import InfoCard from '../../components/InfoCard';
 import MainInfo3 from '../../components/mainInfo3';
-import Table from '../../components/Table';
-import DataTable from '../../components/DataTable';
+import Table1 from '../../components/Table1';
 
 const MultipleCarousels = () => {
   return (
@@ -63,8 +62,7 @@ const HomeScreen = () => {
 
       <View>
         {/* <InfoCard /> */}
-        {/* <Table /> */}
-        <DataTable />
+        <Table1 />
         {/* <MainInfo3 /> */}
       </View>
       {/* <View>
