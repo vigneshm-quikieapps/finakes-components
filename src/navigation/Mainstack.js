@@ -1,26 +1,34 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import HomeScreen from '../screens/home/HomeScreen';
-import FilterPage from '../screens/FilterPage';
-import Login from '../screens/home/Login';
-import Registration from '../screens/home/Registration';
+import {NativeBaseProvider, useTheme} from 'native-base';
+
+import Home from '../screens/home';
+import Table from '../components/Table';
+import MainInfo from '../components/MainInfo';
+import MainInfoCard from '../components/MainInfoCard';
+import InfoCard from '../components/InfoCard';
+import CarouselDemo from '../components/Carousel';
 
 const Stack = createNativeStackNavigator();
 
 const Mainstack = () => {
   return (
-    <NavigationContainer>
-      <Stack.Navigator
-        screenOptions={{
-          headerShown: false,
-        }}>
-        <Stack.Screen name="HomeScreen" component={HomeScreen} />
-        <Stack.Screen name="FilterPage" component={FilterPage} />
-        <Stack.Screen name="Login" component={Login} />
-        <Stack.Screen name="Registration" component={Registration} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <NativeBaseProvider>
+      <NavigationContainer>
+        <Stack.Navigator
+          screenOptions={{
+            headerShown: true,
+          }}>
+          <Stack.Screen name="home" component={Home} />
+          <Stack.Screen name="table" component={Table} />
+          <Stack.Screen name="mainInfo" component={MainInfo} />
+          <Stack.Screen name="mainInfoCard" component={MainInfoCard} />
+          <Stack.Screen name="infoCard" component={InfoCard} />
+          <Stack.Screen name="carousel" component={CarouselDemo} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </NativeBaseProvider>
   );
 };
 
